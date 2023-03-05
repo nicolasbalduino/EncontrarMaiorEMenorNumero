@@ -2,6 +2,18 @@
 float maior, menor;
 int cont = 0;
 
+void MaiorNumero()
+{
+    if (num[cont] > maior)
+        maior = num[cont];
+}
+
+void MenorNumero()
+{
+    if(num[cont] < menor)
+        menor = num[cont];
+}
+
 do
 {
     Console.WriteLine("Informe o " + (cont + 1) + " numero: ");
@@ -14,11 +26,10 @@ menor = num[0];
 
 for (cont = 1; cont < num.Length; cont++)
 {
-    if (num[cont] > maior)
-        maior = num[cont];
+    MaiorNumero();
 
-    if (num[cont] < menor)
-        menor = num[cont];
+    MenorNumero();
+
 }
 
 Console.WriteLine("O maior numero e " + maior);
